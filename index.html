@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<script>
+    function Click() {
+        $('#myButton').click(function() {
+            console.log('Button clicked!');
+            alert('Button clicked!');
+        });
+
+        $('#changeTextButton').click(function() {
+            var newText = $('#textInput').val();
+            $('#main-heading').text(newText);
+            console.log('Header text changed to: ' + newText);
+        });
+
+        $('#toggleButton').click(function() {
+            $('#textInput').toggle();
+            console.log('Text input visibility toggled.');
+        });
+    }
+
+    $(document).ready(function() {
+        Click();
+        console.log("Click function has been called.");
+    });
+</script>
+
+<h1 id="main-heading">Hello, jQuery!</h1>
+<div id="login-form">
+    <label for="username"></label>
+    <input type="text" id="username" placeholder="Enter your username">
+    <label for="password"></label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <button id="loginButton">Login</button>
+</div>
+<div id="welcome-message" style="display: none;">
+    <p>Welcome, <span id="usernameDisplay"></span>!</p>
+    <button id="logoutButton">Logout</button>
+</div>
+
+<label for="textInput"></label>
+<input type="text" id="textInput" placeholder="Enter some text">
+<button id="myButton">Click me</button>
+<button id="changeTextButton">Change Header Text</button>
+<button id="toggleButton">Toggle Input</button>
+
+<script defer src="script.js"></script>
+<script defer src="login.js"></script>
+</body>
+</html>

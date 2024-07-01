@@ -1,0 +1,17 @@
+{
+  "name": "jquery_project",
+  "version": "1.0.0",
+  "description": "jQuery_project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jQuery"
+  ],
+  "author": "Venedykt Mitishov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.30"
+  }
+}
