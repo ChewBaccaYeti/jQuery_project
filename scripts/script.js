@@ -5,7 +5,7 @@ function Click() {
     });
     $('#changeTextButton').click(function () {
         var newText = $('#textInput').val();
-        $('#main-heading').text('newText');
+        $('#main-heading').text(newText);
         console.log('Header text changed to: ' + newText);
     });
     $('#toggleButton').click(function () {

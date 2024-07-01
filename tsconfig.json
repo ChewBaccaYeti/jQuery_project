@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./scripts/**/*", "./__tests__/**/*"]
+}

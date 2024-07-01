@@ -27,6 +27,10 @@ $(document).ready(function () {
         console.log('User logged out.');
         showLogin();
     }
+    function isValidPassword(password) {
+        var regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        return regexp.test(password);
+    }
     loginButton.click(function () {
         var username = usernameInput.val();
         var password = passwordInput.val();
@@ -38,6 +42,23 @@ $(document).ready(function () {
         else {
             console.log('Please enter username and password.');
         }
+        if (!username) {
+            alert('Please enter a username.');
+            return;
+        }
+        else if (!password) {
+            alert('Please enter a password.');
+            return;
+        }
+        if (!isValidPassword(password)) {
+            alert('Password must contain at least 8 characters, ' +
+                'including uppercase, ' +
+                'lowercase letters, numbers, ' +
+                'and special characters. ' +
+                'Spaces are not allowed.');
+            return;
+        }
+        login(username, password);
     });
     logoutButton.click(function () {
         logout();

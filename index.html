@@ -11,31 +11,6 @@
 </head>
 
 <body>
-<script>
-    function Click() {
-        $('#myButton').click(function() {
-            console.log('Button clicked!');
-            alert('Button clicked!');
-        });
-
-        $('#changeTextButton').click(function() {
-            var newText = $('#textInput').val();
-            $('#main-heading').text(newText);
-            console.log('Header text changed to: ' + newText);
-        });
-
-        $('#toggleButton').click(function() {
-            $('#textInput').toggle();
-            console.log('Text input visibility toggled.');
-        });
-    }
-
-    $(document).ready(function() {
-        Click();
-        console.log("Click function has been called.");
-    });
-</script>
-
 <h1 id="main-heading">Hello, jQuery!</h1>
 <div id="login-form">
     <label for="username"></label>
@@ -55,7 +30,7 @@
 <button id="changeTextButton">Change Header Text</button>
 <button id="toggleButton">Toggle Input</button>
 
-<script defer src="script.js"></script>
-<script defer src="login.js"></script>
+<script defer src="scripts/script.js"></script>
+<script defer src="scripts/login.js"></script>
 </body>
 </html>
